@@ -1,0 +1,50 @@
+html,body,
+.bd{width:100%;height:100%}
+
+#hd{position:relative;width:100%;height:44px;line-height:44px;color:#fff;background:#aa1a19;text-align:center;font-size:18px;}
+#hd .cart{position:absolute;right:11px;top:8px;display:block;width:50px;height:28px;text-align:center;line-height:28px;color:#fff;border-radius:7px;border:solid 1px #7a1818;box-shadow:0 0 1px #fff inset;}
+
+#sideBar{display:-webkit-flex;display:flex;justify-content:space-around;align-items:center;width:100%;height:29px;background:#9a9fa5;}
+#sideBar a{display:block;height:29px;line-height:29px;color:#313131;}
+#sideBar a.active{color:#fff;background:url(../images/tri.png) bottom center no-repeat;background-size:50%;}
+#sideBar .name{display:none;}
+
+#ft{position:fixed;bottom:0;left:0;display:-webkit-flex;display:flex;justify-content:space-around;align-items:center;width:100%;height:44px;background:#484850;}
+#ft a{display:-webkit-flex;display:flex;flex-direction:column;justify-content:center;align-items:center;width:44px;height:44px;color:#fff;font-size:12px;box-sizing:border-box;}
+#ft a.active{border-top:solid 3px #d71110;}
+
+#list{position:absolute;top:73px;bottom:44px;width:100%;}
+#wrapper{padding-top:10px;display:-webkit-flex;display:flex;justify-content:space-around;flex-wrap:wrap;}
+#wrapper figure{margin:10px 5px 0;width:122px;height:172px;}
+#wrapper figure img{width:122px;height:122px;border:solid 1px #cacacc;border-radius:2px;box-shadow:0 0 1px #ccc;}
+#wrapper figure figcaption{width:100%;height:50px;}
+#wrapper figure figcaption span{display:block;width:100%;height:22px;line-height:22px;text-align:center;font-size:12px;}
+#wrapper figure figcaption span.name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+#wrapper figure figcaption span.price{display:-webkit-flex;display:flex;justify-content:space-between;}
+#wrapper figure figcaption span.price em{color:#d51112;font-size:14px;}
+
+.cartBox #list{top:44px;}
+#cart{width:100%;}
+#cart li{position:relative;padding:10px;width:100%;height:100px;border-bottom:solid 1px #ddd;box-sizing:border-box;}
+#cart li img{position:absolute;left:10px;top:10px;width:80px;height:80px;border-radius:5px;}
+#cart li p{margin-left:90px;font-size:12px;line-height:20px;}
+#cart li p input{width:30px;height:20px;line-height:20px;text-align:center;border:solid 1px #aaa;border-radius:2px;}
+#cart li p i{display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border:solid 1px #aaa;border-radius:2px;vertical-align:middle;}
+#cart li p i:active{background:#000;color:#fff;}
+#cart li>i{position:absolute;right:10px;bottom:10px;display:block;width:50px;height:20px;line-height:20px;font-size:12px;color:#f00;font-style:normal;}
+#cart li>p{width:70%;margin-bottom: 15px;}
+#cart li>p span{float:right;font-size:20px;color:#c33;}
+.cartBox #hd .cart{font-size:12px;font-style:normal;}
+
+@media screen and (min-width:768px){
+    #sideBar{flex-direction:column;width:140px;height:auto;position:absolute;top:44px;bottom:44px;}
+    #sideBar .name{display:inline;}
+    #sideBar a{width:100%;height:auto;text-align:center;}
+    #sideBar a.active{background:url(../images/tri_left.png) right center no-repeat;}
+
+    #list{width:auto;left:140px;top:44px;}
+
+    #ft{justify-content:flex-start;}
+    #ft a{margin:0 10px;color:#949398}
+    #ft a.active{color:#fff;background:#b81916;border-top:none;}
+}
